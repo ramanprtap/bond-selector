@@ -1,0 +1,88 @@
+/*custom font*/
+
+
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    background: #000; /* fallback for old browsers */
+}
+
+body {
+    font-family:arial;
+    padding: 1em;
+    color: #fff;
+    background: #000; 
+    font-size: 11px;
+    margin: 0 auto;
+}
+
+.navHead{
+	text-align: right;
+	height: 60px;
+}
+.multi-step-form{
+  width: 70%;
+  margin: 0 auto;
+}
+.no-js .multi-step-form fieldset button, .no-js .multi-step-form h2, .multi-step-form.edit-form fieldset button, .multi-step-form.edit-form h2 {
+  display: none !important;
+}
+.no-js .multi-step-form fieldset, .multi-step-form.edit-form fieldset {
+  display: block !important;
+}
+.no-js .multi-step-form [type="submit"], .no-js .multi-step-form [type="reset"], .multi-step-form.edit-form [type="submit"], .multi-step-form.edit-form [type="reset"] {
+  display: inline-block !important;
+}
+.no-js .multi-step-form .steps, .multi-step-form.edit-form .steps {
+  display: none;
+}
+.multi-step-form fieldset {
+  display: none;
+}
+.multi-step-form fieldset:first-of-type {
+  display: block;
+}
+.multi-step-form fieldset.hidden {
+  display: none;
+}
+.multi-step-form fieldset.visible {
+  display: block;
+}
+.multi-step-form .steps button {
+  border: 0;
+}
+.multi-step-form .steps [disabled] {
+  background: none;
+}
+.multi-step-form .steps .active {
+  background: green;
+}
+.steps button{
+  border-radius: 5px;
+  padding: 7.5px;
+}
+.steps{
+  padding-bottom: 1rem;
+}
+
+.error-text {
+  color: red;
+}
+
+label .optional {
+  font-weight: normal;
+  font-size: 90%;
+}
+select{
+  color: #000;
+  width: 100%;
+  height: 45px !important;
+}
+legend {
+  color: #fff;
+}
