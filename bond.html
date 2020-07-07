@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Booking a Sample Deal</title>
+    <script>document.documentElement.className = document.documentElement.className.replace("no-js", "js");</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css'>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="navHead">
+            <img src="assets/images/logo.png" alt="logo">
+        </div>
+    </div>
+    <!-- partial:index.partial.html -->
+    <div class="container">
+        <section class="multi-step-form">
+
+            <h1>Booking a Sample Deal</h1>
+
+            <div class="steps">
+                <button class="active" type="button" disabled>Step One</button> |
+                <button type="button" disabled>Step Two</button> |
+                <button type="button" disabled>Step Three</button> |
+                <button type="button" disabled>Step Four</button> |
+                <button type="button" disabled>Step Five</button> |
+                <button type="button" disabled>Step Six</button> |
+                <button type="button" disabled>Final Step</button>
+            </div>
+
+            <form action="next-page.html" id="test" class="contact-form" method="post" onsubmit="tosubmit();">
+
+                <fieldset aria-label="Step One" id="step-1">
+                    <legend>Personal Details</legend>
+                    <div class="form-group">
+                        <label for="first-name">Full Name</label>
+                        <input class="form-control" type="text" minlength="6" maxlength="250" name="Full-Name" id="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-address">Email Address</label>
+                        <input class="form-control" type="email" name="Email" id="email-address" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default btn-next" type="button" aria-controls="step-2">Next</button>
+                    </div>
+                </fieldset>
+
+                <fieldset aria-label="Step Two" id="step-2">
+                    <legend>Give Comments About Deal</legend>
+
+                    <div class="form-group">
+                        <label for="comment">Comments about deal.</label>
+                        <textarea name="Comment" minlength="50" maxlength="500" id="" class="form-control" cols="30" rows="10" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default btn-prev" type="button" aria-controls="step-1">Previous</button>
+                        <button class="btn btn-default btn-next" type="button" aria-controls="step-3">Next</button>
+                    </div>
+                </fieldset>
+
+                <fieldset role="radiogroup" aria-label="Step Three" id="step-3">
+                    <legend>Select Market Place & Broker</legend>
+                    <div class="form-group">
+                        <label for="">Select Market</label>
+                        <br>
+                        <label for="noramal">Normal market</label>
+                        <input id="noramal" type="radio" name="Market" value="Normal market" required>
+                        <br>
+                        <label for="OTC">OTC market</label>
+                        <input id="OTC" type="radio" name="Market" value="OTC market" required>
+                        <br>
+                        <label for="primart">Primary market</label>
+                        <input id="primart" type="radio" name="Market" value="Primary market" required>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="BrokerTwo">Select Broker</label><br>
+                        <label for="BrokerOne">Broker 1</label>
+                        <input id="BrokerOne" type="checkbox" name="Broker" value="Broker 1" required>
+                        <br>
+                        <label for="BrokerTwo">Broker 2</label>
+                        <input id="BrokerTwo" type="checkbox" name="Broker" value="Broker 2" required>
+                        <br>
+                        <label for="BrokeThree">Broker 3</label>
+                        <input id="BrokeThree" type="checkbox" name="Broker" value="Broker 3" required>
+                        <br>
+                        <label for="BrokeFour">Broker 4</label>
+                        <input id="BrokeFour" type="checkbox" name="Broker" value="Broker 4" required>
+                        <br>
+                        <label for="BrokeFive">Broker 5</label>
+                        <input id="BrokeFive" type="checkbox" name="Broker" value="Broker 5" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-default btn-prev" type="button" aria-controls="step-2">Previous</button>
+                        <button class="btn btn-default btn-next" type="button" aria-controls="step-4">Next</button>
+                    </div>
+                </fieldset>
+
+                <fieldset aria-label="Step four" id="step-3.5">
+
+                    <legend>Choose Dates</legend>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="trade-date">Enter Trade Date</label>
+                                    <input type="date" class="form-control" name="Enter-Trade-Date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="trade-date">Enter Settlement Date</label>
+                                    <input type="date" class="form-control" name="Enter-Settlement-Data" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <button class="btn btn-default btn-prev" type="button"
+                                        aria-controls="step-2">Previous</button>
+                                    <button class="btn btn-default btn-next" type="button"
+                                        aria-controls="step-4">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </fieldset>
+                <fieldset aria-label="select state" id="step-4">
+                    <legend>Select Region</legend>                   
+                     <div class="form-group">
+                        <select id="countySel" size="1" name="Country" required>
+                            <option value="" selected="selected">-- Select Country --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="stateSel" size="1" name="State" required>
+                            <option value="" selected="selected">-- Select State--</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <select id="citySel" size="1" name="City" required>
+                            <option value="" selected="selected">-- Select City--</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="zipSel" size="1" name="Zipcode" required>
+                            <option value="" selected="selected">-- Select Zip--</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="selectOpt" size="1" name="Fixed-Income" required>
+                            <option value="" selected="selected">-- Select Option--</option>
+                            <option value="Fixed Income">Fixed Income</option>
+                            <option value="Forex">Forex</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="pilot_graph_form">
+                        <label for="EnterValue">Price of the Security</label>
+                        <input class="form-control" type="number" min="0" name="enter-value" id="enter-value" required>
+                    </div>
+
+                    <div class="form-group" id="client_graph_form">
+                        <label for="EnterValue">Primary Notional Rate</label>
+                        <input class="form-control" type="number" min="0" name="Primary-value" oninput="multiply()"
+                            id="multiplicand" required>
+                        <br>
+                        <label for="EnterValue">Forex Rate</label>
+                        <input class="form-control" type="number" min="0" name="Forex-value" id="multiplier"
+                            oninput="multiply()" required>
+                        <br>
+                        <label for="secondryRate">Secondary Notional Rate</label>
+                        <input class="form-control" type="number" name="Secondary-Notional-Rate" id="showProduct" readonly>
+                       
+                        <!-- <span id="showProduct"></span> -->
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-default btn-prev" type="button" aria-controls="step-2">Previous</button>
+                        <button class="btn btn-default btn-next" type="button" aria-controls="step-4">Next</button>
+                    </div>
+                </fieldset>
+                <fieldset role="radiogroup" aria-label="Step five" aria-describedby="co-borrower-error" id="step-5">
+                    <legend>Fee of Trade</legend>
+                    <div  class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group" id="tradeValueDetails">
+                                    <label for="tradeValueDetails">Enter the fee amount for the trade</label>
+                                    <input class="form-control" type="number" min="0" name="Trade-Value-Details" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" id="uploadDoc">
+                                <label for="uploadDoc">Upload document</label>
+                                 <input type="file" class="form-control" name="Document" required/>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                            <div class="form-group">
+                                <button class="btn btn-default btn-prev" type="button" aria-controls="step-2">Previous</button>
+                                <button class="btn btn-default btn-next" type="button" aria-controls="step-4">Next</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset aria-label="Step Six" id="step-6">
+                    <legend>Hit submit to see the data table</legend>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="submit" value="Send">Submit</button>
+                    </div>
+                </fieldset>
+
+            </form>
+        </section>
+    </div>
+    <textarea name="data" id="data" rows="10" class="form-control" style="display: none !important;"></textarea>
+   <div class="container-fluid">
+    <div class="table-responsive">
+        <table id="table" class="table table-bordered .table-hover"></table>
+    </div>
+   </div>
+
+  
+
+    <div class="results" style="display: none !important;">
+        <h2 class="results__heading">Form Data</h2>
+        <pre class="results__display-wrapper"><code class="results__display"></code></pre>
+      </div>
+
+    <!-- partial -->
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'></script>
+    <!-- <script src="assets/js/multi-step.js"></script> -->
+    <script src="assets/js/script.js"></script>
+    <script>
+         // Called on form's `onsubmit`
+         function tosubmit() {
+            // Getting the value of your text input
+            var mytext = document.getElementById("firstname").value;
+
+            // Storing the value above into localStorage
+            localStorage.setItem("mytext", mytext);
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>
